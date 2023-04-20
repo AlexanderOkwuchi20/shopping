@@ -1,0 +1,46 @@
+echo "# team-elitedev" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/AlexanderOkwuchi20/team-elitedev.git
+git push -u origin main
+
+
+django-admin startproject shopping
+py manage.py startapp home
+py manage.py startapp userprofile
+py manage.py migrate
+py manage.py runserver
+
+to cut server use ctrl + C
+
+Models(Determines how our databasee architecture looks like... ie how data is being stored)
+
+CharField(max-length=255)
+TextField()
+URLField()
+EmailField()
+FileField()
+ImageField()
+DateField()
+DateTimeField(auto_now = True, auto_add_now = True)
+SlugField()......... etc
+Admin(admin prints out inputs from he clent on the admin panel)
+Forms(helps to make duplicate/replica of the client form on the server side )
+Views(helps to get data/implimemt functionalities)
+Urls(chains views to both templates and to the browser)
+
+
+query the db means to get data from the db
+persist to the db means to send items into the db
+
+
+CRUD methods we use in our ORM/methods used in collecting data
+C --- Create(POST)
+R --- Read(GET)
+U --- Update(PUT, PATCH)
+D --- Delete (DELETE)
+
+
+P.S ORM = Object Relational Matter

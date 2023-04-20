@@ -1,0 +1,29 @@
+<div class="kevin">
+    <div class="three-body">
+      <div class="three-body__dot"></div>
+      <div class="three-body__dot"></div>
+      <div class="three-body__dot"></div>
+    </div>
+</div>
+
+    
+  
+  <div class="container-fluid bg-light" id="backtop">
+      <div class="row mx-5">
+          <div class="col-6">Contact: +234 8154 234 343</div>
+          <div class="col-6"> email: info@gmail.com</div>
+      </div>
+  </div> 
+
+
+
+<div class="container">
+    {% if messages %}
+       {% for message in messages %}
+          <div class="alert alert-warning alert-dismissible fade show shola w-100" role="alert">
+            <strong>{{message}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+         </div>
+       {% endfor %}
+   {% endif %}
+</div>  

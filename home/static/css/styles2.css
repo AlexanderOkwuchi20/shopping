@@ -1,0 +1,457 @@
+.s{
+    font-family: 'Times New Roman', Times, serif;
+}
+:root{
+    --body--: white;
+    --text-color:red;
+}
+.dark{
+    --body--:black;
+    --text-color:white;
+}
+body{
+    background: var(--body--);
+}
+.fa-moon{
+    color: var(--text-color);
+    font-size: 2rem;
+}
+.fa-sun{
+    color: var(--text-color);
+    font-size: 2rem;
+}
+.kevin{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: white;
+    z-index: 99999;
+}
+.three-body {
+    --uib-size: 35px;
+    --uib-speed: 0.8s;
+    --uib-color: #5D3FD3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    height: var(--uib-size);
+    width: var(--uib-size);
+    animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
+   }
+   
+   .three-body__dot {
+    position: absolute;
+    height: 100%;
+    width: 30%;
+   }
+   
+   .three-body__dot:after {
+    content: '';
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: var(--uib-color);
+    border-radius: 50%;
+   }
+   
+   .three-body__dot:nth-child(1) {
+    bottom: 5%;
+    left: 0;
+    transform: rotate(60deg);
+    transform-origin: 50% 85%;
+   }
+   
+   .three-body__dot:nth-child(1)::after {
+    bottom: 0;
+    left: 0;
+    animation: wobble1 var(--uib-speed) infinite ease-in-out;
+    animation-delay: calc(var(--uib-speed) * -0.3);
+   }
+   
+   .three-body__dot:nth-child(2) {
+    bottom: 5%;
+    right: 0;
+    transform: rotate(-60deg);
+    transform-origin: 50% 85%;
+   }
+   
+   .three-body__dot:nth-child(2)::after {
+    bottom: 0;
+    left: 0;
+    animation: wobble1 var(--uib-speed) infinite
+       calc(var(--uib-speed) * -0.15) ease-in-out;
+   }
+   
+   .three-body__dot:nth-child(3) {
+    bottom: -5%;
+    left: 0;
+    transform: translateX(116.666%);
+   }
+   
+   .three-body__dot:nth-child(3)::after {
+    top: 0;
+    left: 0;
+    animation: wobble2 var(--uib-speed) infinite ease-in-out;
+   }
+   
+   @keyframes spin78236 {
+    0% {
+     transform: rotate(0deg);
+    }
+   
+    100% {
+     transform: rotate(360deg);
+    }
+   }
+   
+   @keyframes wobble1 {
+    0%,
+     100% {
+     transform: translateY(0%) scale(1);
+     opacity: 1;
+    }
+   
+    50% {
+     transform: translateY(-66%) scale(0.65);
+     opacity: 0.8;
+    }
+   }
+   
+   @keyframes wobble2 {
+    0%,
+     100% {
+     transform: translateY(0%) scale(1);
+     opacity: 1;
+    }
+   
+    50% {
+     transform: translateY(66%) scale(0.65);
+     opacity: 0.8;
+    }
+   }
+
+
+
+
+
+
+
+
+
+
+
+.navbar{
+    position:fixed;
+    height: 4rem;
+    top:0;
+    margin-top: 1.5rem;
+    /* z-index: 10; */
+    /* background: red; */
+    width:100%;
+    font-size: 1.5rem;
+}
+.nav-item .actor:hover{
+    color: orangered;
+    cursor: pointer;
+}
+.nav-item .actor:hover::after{
+    margin: auto;
+    margin-top: 10px;
+    content: "";
+    display: block;
+    height: 3px;
+    width: 5rem;
+    border-radius: 1%;
+    background-color: orangered;
+}
+.navbar img{
+    padding-left: 5rem;
+}
+.navbar-nav{
+    padding-left: 15rem;
+}
+.navbar-nav .nav-item{
+    padding-left: 2.5rem;
+}
+/* .nav-link:hover::after{
+    content: "";
+    height: 4px;
+    width: 4rem;
+    margin: auto;
+    display: block;
+    color: orangered;
+    cursor: pointer;
+} */
+.problem{
+    color: orangered;
+}
+.problem::after{
+    content: "";
+    height: 4px;
+    width: 4.5rem;
+    margin: auto;
+    display: block;
+    background-color: orangered;
+
+}
+ .nav-link{
+    color: white;
+    font-weight: 550;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+.dropdown-menu{
+    background-color: white;
+    font-size: 12px;
+}
+.dropdown-item{
+    background-color: none;
+}
+.dropdown-item:hover{
+    background-color: orangered;
+}
+.carousel{
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 79%, 0 83%);
+}
+.carousel-inner{
+    height: 80vh;
+    margin-bottom: 1.5rem;
+}
+ 
+.carousel-caption p{
+    color:white;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.carousel-caption p em{
+    color: white;
+    font-size: 1.5rem;
+    padding-bottom: 7rem;
+    text-align: center;
+}
+.carousel-caption h3{
+    color: white;
+    font-size: 2rem;
+    font-weight: 500; 
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.carousel-indicators{
+    margin-bottom: 6rem;
+}
+.carousel-indicators button{
+    border-radius: 50%;
+    width: 15px !important;
+    height: 15px !important;
+}
+.welcome{
+    text-align: center;
+}
+.welcome h2{
+    font-weight: lighter;
+}
+.micromind{
+    color: orangered;
+    font-weight: 500;
+}
+.btn{
+    background-color:black;
+    color: white;
+    width: 11rem;
+    padding: 0.9rem;
+    border-radius: 48.5%;
+}
+.btn:hover{
+    background-color: orangered;
+    transition: 1s;
+    color: white;
+}
+.welcome h2::after{
+    margin: auto;
+    margin-top: 15px;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 5.5rem;
+    border-radius: 1%;
+    background-color: orangered;
+    transform: translateX(10px);
+}
+.card-img-top{
+    background-color: black;
+    height: 5rem;
+    width: 5rem;
+    margin-right: 4rem;
+    border-radius: 50%;
+    text-align: center;
+}
+.card-img-top:hover{
+    color: orangered;
+    cursor: pointer;
+}
+.card2{
+    text-align: center;
+}
+.card1{
+    text-align:center ;
+}
+.card-title{
+    font-weight: bold;
+}
+.button{
+    align-content: center;
+    width: 8rem;
+    background-color: rgb(81, 88, 107);
+    color: white;
+    padding: 0.7rem;
+    border-radius: 20%;
+    outline: none;
+    border: none;
+}
+.button:focus{
+    outline: none;
+    border: none;
+}
+.our{
+    text-align: center;
+    margin-top: 4rem;
+}
+.our h2{
+    font-weight: lighter;
+}
+.our h2::after{
+    margin: auto;
+    margin-top: 15px;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 5.5rem;
+    border-radius: 1%;
+    background-color: orangered;
+    transform: translateX(10px);
+}
+.service{
+    color: orangered;
+    font-weight: 600;
+}
+.container-fluid{
+    background-color: rgb(232, 231, 231);
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 12%, 100% 5%, 100% 88%, 0 96%);
+}
+.texx{
+    font-size: 15px;
+}
+.diff{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.imgg img{
+    margin-bottom: 1rem;
+}
+.r{
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+ .texx:hover{
+    color: orangered;
+    cursor: pointer;
+ }
+
+ .difff:hover{
+    color: orangered;
+    cursor: pointer;
+ }
+.partners{
+    text-align: center;
+}
+.partner{
+    color: orangered;
+    font-weight: 600;
+}
+.partner::after{
+    content: "";
+    height: 4px;
+    width: 4.5rem;
+    margin: auto;
+    display: block;
+    background-color: orangered;
+
+}
+.footer{
+    background-color:rgba(17, 32, 32);
+    padding: 2rem;
+}
+.style{
+    font-size: 18px;
+    color: white;
+}
+.style span{
+    color: white;
+    font-weight: 600;
+}
+.style::after{
+    margin-top: 10px;
+    content: "";
+    display: block;
+    height: 3px;
+    width: 2.5rem;
+    border-radius: 1%;
+    background-color: orangered;
+}
+.list-unstyled li{
+    font-size: medium;
+    padding: 8px;
+    margin-right: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+.list-unstyled li:hover{
+    transition: 1s;
+    transform: translateX(10px);
+}
+.list-unstyled li a:hover{
+    transform: translateY(5px);
+    color: orangered;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+}
+.list-unstyled li a{
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 800;
+    margin-top: 2rem;
+}
+.list-unstyled p{
+    color: white;
+}
+.list-unstyled.st li{
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+}
+.list-inline-item{
+    margin-bottom: 1rem;
+    color: white;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+}
+.shift{
+    padding-right: 4rem;
+}
+.footer2 p{
+    color: white;
+    padding-top: 2rem;
+}
+.bob{
+    background-color: orangered;
+    position: absolute;
+    margin-left: 35rem;
+    margin-bottom: 20rem;
+    width: 2rem;
+}
